@@ -14,13 +14,13 @@
   --color-base-200: #272727;
   --color-base-300: #303030;
   --color-base-content: #FFFFFF;
-  --color-primary: #F4630C;
+  --color-primary: #0B1F3A;
   --color-primary-content: #FFFFFF;
-  --color-secondary: #1DCD9F;
+  --color-secondary: #D4A72C;
   --color-secondary-content: #FFFFFF;
   --color-accent: #E5C8B6;
   --color-accent-content: oklch(98% 0.01 160);
-  --color-neutral: #FDFDFD;
+  --color-neutral: #F4F6F8;
   --color-neutral-content: #000000;
   --color-info: #4B4B4B;
   --color-info-content: oklch(98% 0.01 220);
@@ -71,7 +71,6 @@
     --color-muted-foreground: var(--muted-foreground);
     --color-muted: var(--muted);
     --color-secondary-foreground: var(--secondary-foreground);
-    --color-secondary: var(--secondary);
     --color-primary-foreground: var(--primary-foreground);
     --color-popover-foreground: var(--popover-foreground);
     --color-popover: var(--popover);
