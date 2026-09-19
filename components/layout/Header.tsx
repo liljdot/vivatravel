@@ -8,7 +8,7 @@ const Header: React.FC = () => {
 
     return (
         <>
-            <div className="navbar bg-neutral px-5 md:px-25">
+            <div className="navbar fixed bg-neutral px-5 md:px-25 z-1000">
                 {/* navbar start */}
                 <div className="navbar-start">
                     <Link href="/" className="block relative">
