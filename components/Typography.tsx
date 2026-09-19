@@ -19,7 +19,7 @@ const AncizarH6: React.FC<ComponentProps<"h6">> = ({
             <h6
                 className={cn(
                     aSerif.className,
-                    "text-lg md:text-2xl",
+                    "text-lg",
                     className
                 )}
                 {...props}

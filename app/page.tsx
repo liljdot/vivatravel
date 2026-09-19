@@ -1,6 +1,7 @@
 import HeadingSection from "./HeadingSection";
 import MapSection from "./MapSection";
 import MoreThanSection from "./MoreThanSection";
+import PillarsSection from "./PillarsSection";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeadingSection />
       <MapSection />
       <MoreThanSection />
+      <PillarsSection />
     </main>
   );
 }
