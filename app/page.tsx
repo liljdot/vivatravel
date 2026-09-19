@@ -2,6 +2,7 @@ import HeadingSection from "./HeadingSection";
 import MapSection from "./MapSection";
 import MoreThanSection from "./MoreThanSection";
 import PillarsSection from "./PillarsSection";
+import WhyChooseSection from "./WhyCooseSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <MapSection />
       <MoreThanSection />
       <PillarsSection />
+      <WhyChooseSection />
     </main>
   );
 }
