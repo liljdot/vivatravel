@@ -1,3 +1,4 @@
+import CloserLookSection from "./CloserLookSection";
 import HeadingSection from "./HeadingSection";
 import MapSection from "./MapSection";
 import MoreThanSection from "./MoreThanSection";
@@ -12,6 +13,7 @@ export default function Home() {
       <MoreThanSection />
       <PillarsSection />
       <WhyChooseSection />
+      <CloserLookSection />
     </main>
   );
 }

@@ -1,3 +1,4 @@
+"use client"
 import Section from "@/components/layout/Section"
 import { AncizarH4, AncizarH6 } from "@/components/Typography";
 import travelIcon from "@/public/assets/images/travel-icon.png"
@@ -5,7 +6,6 @@ import worldIcon from "@/public/assets/images/world-icon.png"
 import heartIcon from "@/public/assets/images/heart-icon.png"
 import growthIcon from "@/public/assets/images/growth-icon.png"
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
 import { IoArrowForward } from "react-icons/io5";
 
 const PillarsSection: React.FC = () => {
@@ -14,25 +14,25 @@ const PillarsSection: React.FC = () => {
             title: "Travel Globally",
             content: "Corporate and leisure travel, visas, accommodation, and travel logistics",
             icon: travelIcon,
-            to: ""
+            to: "travel"
         },
         {
             title: "Grow Your Business",
             content: "International trade, sourcing, business missions, and market-entry support.",
             icon: growthIcon,
-            to: ""
+            to: "growbusiness"
         },
         {
             title: "Explore Overseas Opportunities",
             content: "International recruitment, employment, and educational opportunities.",
             icon: worldIcon,
-            to: ""
+            to: "overseasopportunities"
         },
         {
             title: "Access International Healthcare",
             content: "Medical tourism and treatment coordination",
             icon: heartIcon,
-            to: ""
+            to: "medical"
         }
     ]
 
@@ -62,7 +62,11 @@ interface PillarCardProps {
     to: string
 }
 
-const PillarCard: React.FC<PillarCardProps> = ({ title, content, icon }) => {
+const PillarCard: React.FC<PillarCardProps> = ({ title, content, icon, to }) => {
+    const scrollTo = (to: string) => {
+        document.getElementById("closerlook")?.scrollIntoView({behavior: "smooth"})
+        document.getElementById(to)?.click()
+    }
 
     return (
         <div className="relative card gap-9 bg-primary-content text-primary basis-1/4 pl-10 pt-6 pb-3 pr-0">
@@ -74,10 +78,13 @@ const PillarCard: React.FC<PillarCardProps> = ({ title, content, icon }) => {
             </div>
 
             <div className="card-actions px-3 justify-end">
-                <Link href={""} className="btn btn-ghost text-[#6B6B6B] hover:btn-primary hover:text-primary-content hover:scale-110 transition-all ease-in-out duration-300 rounded-full font-normal">
+                <a onClick={e => {
+                    e.preventDefault()
+                    scrollTo(to)
+                }} className="btn btn-ghost text-[#6B6B6B] hover:btn-primary hover:text-primary-content hover:scale-110 transition-all ease-in-out duration-300 rounded-full font-normal">
                     Explore
                     <IoArrowForward className="size-3 ml-4" />
-                </Link>
+                </a>
             </div>
 
             <figure className="absolute size-16 -top-8 -left-8">
