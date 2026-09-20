@@ -186,27 +186,27 @@ const Selector: React.FC = () => {
 
     const [tab, setTab] = useState<SingleTabContent["id"]>(tabsContent[0].id)
 
-    useEffect(() => {
-        const hash = window.location.hash
+    // useEffect(() => {
+    //     const hash = window.location.hash
 
-        alert(hash)
+    //     alert(hash)
 
-        const handleHashChange = () => {
-            alert("yes")
-            if (hash.includes("closerlook")) {
+    //     const handleHashChange = () => {
+    //         alert("yes")
+    //         if (hash.includes("closerlook")) {
                 
-                const element = document.getElementById("closerlook")
-                element?.scrollIntoView({
-                    behavior: "smooth"
-                })
-            }
-        }
+    //             const element = document.getElementById("closerlook")
+    //             element?.scrollIntoView({
+    //                 behavior: "smooth"
+    //             })
+    //         }
+    //     }
 
-        window.addEventListener("hashchange", handleHashChange)
+    //     window.addEventListener("hashchange", handleHashChange)
 
-        return () => window.removeEventListener("hashchange", handleHashChange)
+    //     return () => window.removeEventListener("hashchange", handleHashChange)
 
-    }, [])
+    // }, [])
 
     return (
         <Tabs value={tab} onValueChange={setTab} className={"flex flex-col gap-21"}>
