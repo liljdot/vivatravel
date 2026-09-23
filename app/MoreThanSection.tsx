@@ -1,5 +1,5 @@
 import Section from "@/components/layout/Section"
-import { AncizarH4 } from "@/components/Typography";
+import { AncizarH4, AncizarH5 } from "@/components/Typography";
 import background from "@/public/assets/images/star-bg.png"
 import cardImage from "@/public/assets/images/more-than-card-image.png"
 import Image from "next/image";
@@ -24,20 +24,28 @@ const MoreThanSection: React.FC = () => {
                 </figure>
                 <div className="card-body basis-2/3 gap-12 p-0 z-2 text-primary-content">
                     <div className="flex flex-col gap-2">
-                        <AncizarH4 className="card-title">More Than a Travel Company</AncizarH4>
+                        <AncizarH4 className="card-title">About Viva Travel Services Ltd.</AncizarH4>
                         <p className="italic">
-                            Eighteen years of opening doors. One partner for every border.
+                            Connecting People, Businesses and Opportunities Across Borders.
                         </p>
                     </div>
-                    <p className="text-sm/6.5">
-                        Since our founding in April 2008, Viva Travel Services Ltd has been built on a simple belief: that distance should never stand between people and opportunity. What began as a travel services company rooted in trust, precision, and genuine customer care has grown into something far bigger, a partner that helps individuals, families, professionals, and businesses move confidently across borders, industries, and possibilities.
+                    <div className="text-sm/6.5">
+                        Established in April 2008, Viva Travel Services Ltd (VTS) began as a trusted travel and tourism company. Today, we provide business, international mobility and opportunity-focused solutions alongside our travel services.
                         <br />
                         <br />
-                        Over the years, we&apos;ve stayed close to the pulse of global travel trends while continuously reshaping what we offer, because the needs of the people and organisations we serve have never stood still. That evolution has taken us well beyond flights and itineraries. Today, Viva Travel Services sits at the intersection of international business growth, overseas recruitment, medical tourism, and educational mobility. helping our clients not just travel the world, but grow, work, heal, and study in it.
+                        Our work covers four key areas: Business Growth and International Trade Facilitation, International Recruitment and Overseas Opportunities, Travel and Tourism, and International Mobility Services
                         <br />
                         <br />
-                        What hasn&apos;t changed is the way we work: with a customer-first approach, a forward-thinking mindset, and an unwavering commitment to getting the details right. Whether we&apos;re coordinating a business mission abroad, securing a student&apos;s admission overseas, arranging world-class medical care, or simply booking a well-earned holiday, our promise stays the same, every border you need to cross, we help you cross it well.
-                    </p>
+                        <AncizarH5>Our Approach</AncizarH5>
+                        <br />
+                        Although our services have evolved, our guiding principles since 2008 remain unchanged: professionalism, integrity, responsiveness, attention to detail and a commitment to our clients&apos; objectives.
+                        <br />
+                        <br />
+                        We recognise that international business, employment, education, healthcare and travel each involve important decisions, financial commitments and logistical challenges. Our role is to provide practical guidance, coordinate the relevant services and help our clients navigate these processes with greater clarity and confidence.
+                        <br />
+                        <br />
+                        At VTS, we do more than arrange travel. We connect people and businesses with opportunities across borders and provide the professional support needed to help turn those opportunities into meaningful outcomes
+                    </div>
                 </div>
             </div>
 
