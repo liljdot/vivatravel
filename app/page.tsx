@@ -9,15 +9,15 @@ import WhyChooseSection from "./WhyCooseSection";
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-full bg-neutral">
+    <main className="flex flex-col w-full bg-neutral overflow-clip">
       <HeadingSection />
       <MapSection />
       <MoreThanSection />
-      <PillarsSection />
+      {/* <PillarsSection />
       <WhyChooseSection />
       <CloserLookSection />
       <LetsTalkSection />
-      <JourneysSection />
+      <JourneysSection /> */}
     </main>
   );
 }
