@@ -31,13 +31,13 @@ const MoreThanSection: React.FC = () => {
                     />
                 </figure>
                 <div className="card-body basis-2/3 gap-10 md:gap-12 p-0 z-2 text-primary-content">
-                    <div className="flex flex-col text-center gap-5 md:gap-2">
+                    <div className="flex flex-col text-center md:text-left gap-5 md:gap-2">
                         <AncizarH4 className="card-title">About Viva Travel Services Ltd.</AncizarH4>
                         <p className="italic text-sm md:text-base">
                             Connecting People, Businesses and Opportunities Across Borders.
                         </p>
                     </div>
-                    <div className="text-sm/6.5 text-center">
+                    <div className="text-sm/6.5 text-center md:text-left">
                         Established in April 2008, Viva Travel Services Ltd (VTS) began as a trusted travel and tourism company. Today, we provide business, international mobility and opportunity-focused solutions alongside our travel services.
                         <br />
                         <br />
