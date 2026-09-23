@@ -14,7 +14,7 @@ const Section: React.FC<Props> = ({
 
     return (
         <section
-            className={cn("flex flex-col px-5 md:px-30",
+            className={cn("flex flex-col px-4.5 md:px-30",
                 className
             )}
             {...props}
