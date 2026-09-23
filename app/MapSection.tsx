@@ -14,6 +14,9 @@ import healthImageText from "@/public/assets/images/health-image-text.png"
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { IoArrowForward } from "react-icons/io5";
+import { whatsappLink } from "./data";
 
 const MapSection: React.FC = () => {
 
@@ -56,76 +59,83 @@ const MapSection: React.FC = () => {
     )
 
     return (
-        <Section className="relative mt-10 h-59 md:h-screen overflow-hidden">
-            <div
-                ref={sectionRef}
-                className="relative h-full w-full"
-            >
-                {/* for desktop, hidden on mobile */}
-                <motion.div
-                    className="hidden md:flex absolute inset-0"
-                    style={{
-                        scale,
-                        opacity,
-                        y,
-                        rotateY,
-                    }}
+        <>
+            <Section className="relative mt-10 h-59 md:h-screen overflow-hidden">
+                <div
+                    ref={sectionRef}
+                    className="relative h-full w-full"
                 >
-                    <Image
-                        src={mapImage}
-                        alt="Map"
-                        fill
-                        className="object-cover"
-                    />
-                </motion.div>
+                    {/* for desktop, hidden on mobile */}
+                    <motion.div
+                        className="hidden md:flex absolute inset-0"
+                        style={{
+                            scale,
+                            opacity,
+                            y,
+                            rotateY,
+                        }}
+                    >
+                        <Image
+                            src={mapImage}
+                            alt="Map"
+                            fill
+                            className="object-cover"
+                        />
+                    </motion.div>
 
-                {/* for mobile, hidden on desktop */}
-                <motion.div
-                    className="flex md:hidden absolute inset-0"
-                    style={{
-                        x
-                    }}
-                >
-                    <Image
-                        src={mapImage}
-                        alt="Map"
-                        fill
-                        className="object-cover"
-                    />
-                </motion.div>
-            </div>
+                    {/* for mobile, hidden on desktop */}
+                    <motion.div
+                        className="flex md:hidden absolute inset-0"
+                        style={{
+                            x
+                        }}
+                    >
+                        <Image
+                            src={mapImage}
+                            alt="Map"
+                            fill
+                            className="object-cover"
+                        />
+                    </motion.div>
+                </div>
 
-            <Orbit
-                scrollYProgress={scrollYProgress}
-                bubbles={[
-                    {}, {
-                        className: "bg-secondary"
-                    }
-                ]}
-            />
-            <Orbit
-                scrollYProgress={scrollYProgress}
-                sizeClassName="size-33 md:size-102"
-                bubbles={[{ className: "hidden" }]}
-            />
-            <Orbit
-                scrollYProgress={scrollYProgress}
-                sizeClassName="size-23 md:size-72"
-                borderClassName="border-primary"
-                bubbles={[{ className: "bg-primary" }]}
-            />
-            <Orbit
-                scrollYProgress={scrollYProgress}
-                sizeClassName="size-67.5 md:size-204"
-                borderClassName="border-none"
-                bubbles={[{ className: "bg-primary" }]}
-            />
+                <Orbit
+                    scrollYProgress={scrollYProgress}
+                    bubbles={[
+                        {}, {
+                            className: "bg-secondary"
+                        }
+                    ]}
+                />
+                <Orbit
+                    scrollYProgress={scrollYProgress}
+                    sizeClassName="size-33 md:size-102"
+                    bubbles={[{ className: "hidden" }]}
+                />
+                <Orbit
+                    scrollYProgress={scrollYProgress}
+                    sizeClassName="size-23 md:size-72"
+                    borderClassName="border-primary"
+                    bubbles={[{ className: "bg-primary" }]}
+                />
+                <Orbit
+                    scrollYProgress={scrollYProgress}
+                    sizeClassName="size-67.5 md:size-204"
+                    borderClassName="border-none"
+                    bubbles={[{ className: "bg-primary" }]}
+                />
 
-            <CenterImage scrollYProgress={scrollYProgress} />
-            <StudentImage />
-            <WorkerImage />
-            <HealthImage />
-        </Section>
+                <CenterImage scrollYProgress={scrollYProgress} />
+                <StudentImage />
+                <WorkerImage />
+                <HealthImage />
+            </Section>
+
+            <Link href={whatsappLink} className="mt-11 md:hidden flex w-fit mx-auto btn rounded-full bg-primary font-normal px-8 py-4 transition-all duration-300 ease-in-out hover:scale-105" target="_blank" rel="noopener noreferrer">
+                Make an Inquiry
+                <IoArrowForward className="ml-2 size-4.5 text-secondary" />
+            </Link>
+        </>
     )
 }
 
