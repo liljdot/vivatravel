@@ -6,7 +6,7 @@ import { IoArrowForward } from "react-icons/io5";
 
 const HeadingSection: React.FC = () => {
     return (
-        <Section className="mt-13 md:mt-37.5 gap-5 md:gap-10 items-center py-10 md:py-0">
+        <Section className="mt-23 md:mt-37.5 gap-5 md:gap-10 items-center">
             <AncizarH1 className="text-center text-primary font-semibold md:px-30">
                 Connecting People, Businesses and Opportunities Across Borders.
             </AncizarH1>

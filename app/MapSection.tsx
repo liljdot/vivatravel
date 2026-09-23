@@ -48,19 +48,42 @@ const MapSection: React.FC = () => {
         [180, 0, -180]
     )
 
+    // for mobile 
+    const x = useTransform(
+        scrollYProgress,
+        [-0.5, 1, 1.25],
+        ["50vw", "0vw", "-100vw"]
+    )
+
     return (
-        <Section className="relative mt-10 h-screen overflow-hidden">
+        <Section className="relative mt-10 h-59 md:h-screen overflow-hidden">
             <div
                 ref={sectionRef}
                 className="relative h-full w-full"
             >
+                {/* for desktop, hidden on mobile */}
                 <motion.div
-                    className="absolute inset-0"
+                    className="hidden md:flex absolute inset-0"
                     style={{
                         scale,
                         opacity,
                         y,
                         rotateY,
+                    }}
+                >
+                    <Image
+                        src={mapImage}
+                        alt="Map"
+                        fill
+                        className="object-cover"
+                    />
+                </motion.div>
+
+                {/* for mobile, hidden on desktop */}
+                <motion.div
+                    className="flex md:hidden absolute inset-0"
+                    style={{
+                        x
                     }}
                 >
                     <Image
@@ -82,18 +105,18 @@ const MapSection: React.FC = () => {
             />
             <Orbit
                 scrollYProgress={scrollYProgress}
-                sizeClassName="size-102"
+                sizeClassName="size-33 md:size-102"
                 bubbles={[{ className: "hidden" }]}
             />
             <Orbit
                 scrollYProgress={scrollYProgress}
-                sizeClassName="size-72"
+                sizeClassName="size-23 md:size-72"
                 borderClassName="border-primary"
                 bubbles={[{ className: "bg-primary" }]}
             />
             <Orbit
                 scrollYProgress={scrollYProgress}
-                sizeClassName="size-204"
+                sizeClassName="size-67.5 md:size-204"
                 borderClassName="border-none"
                 bubbles={[{ className: "bg-primary" }]}
             />
@@ -134,7 +157,7 @@ const Orbit: React.FC<OrbitProps> = ({ sizeClassName, bubbles, scrollYProgress, 
     return (
         <>
             <div
-                className={cn("absolute left-1/2 top-1/2 size-133 -translate-x-1/2 -translate-y-1/2 mx-auto",
+                className={cn("absolute left-1/2 top-1/2 size-43 md:size-133 -translate-x-1/2 -translate-y-1/2 mx-auto",
                     sizeClassName
                 )}
             >
@@ -150,7 +173,7 @@ const Orbit: React.FC<OrbitProps> = ({ sizeClassName, bubbles, scrollYProgress, 
                         bubbles?.length ?
                             bubbles.map((bubble, index) => (<motion.div
                                 key={index}
-                                className={cn("absolute inset-0", index == 0 && "border", "border-[#E3E3E3] rounded-full", borderClassName)}
+                                className={cn("absolute inset-0", index == 0 && "border-[0.5px] md:border", "border-[#E3E3E3] rounded-full", borderClassName)}
                                 animate={{
                                     rotate: 360,
                                 }}
@@ -168,7 +191,7 @@ const Orbit: React.FC<OrbitProps> = ({ sizeClassName, bubbles, scrollYProgress, 
                                 >
                                     {/* Bubble */}
 
-                                    <div className={cn("absolute left-1/2 -top-2 -translate-x-1/2 size-3.5 rounded-full bg-primary",
+                                    <div className={cn("absolute left-1/2 -top-[1.5px] md:-top-2 -translate-x-1/2 size-1 md:size-3.5 rounded-full bg-primary",
                                         bubble.className
                                     )}>
                                     </div>
@@ -176,7 +199,7 @@ const Orbit: React.FC<OrbitProps> = ({ sizeClassName, bubbles, scrollYProgress, 
                             </motion.div>))
 
                             : (<motion.div
-                                className="absolute inset-0 border border-[#E3E3E3] rounded-full"
+                                className="absolute inset-0 border-[0.5px] md:border border-[#E3E3E3] rounded-full"
                                 animate={{
                                     rotate: 360,
                                 }}
@@ -188,7 +211,7 @@ const Orbit: React.FC<OrbitProps> = ({ sizeClassName, bubbles, scrollYProgress, 
                             >
                                 {/* Bubble */}
 
-                                <div className={"absolute left-1/2 -top-2 -translate-x-1/2 size-3.5 rounded-full bg-primary z-20"}>
+                                <div className={"absolute left-1/2 -top-[1.5px] md:-top-2 -translate-x-1/2 size-1 md:size-3.5 rounded-full bg-primary z-20"}>
                                 </div>
                             </motion.div>)
                     }
@@ -214,7 +237,7 @@ const CenterImage: React.FC<CenterImageProps> = ({ scrollYProgress }) => {
 
     return (
         <motion.div
-            className="absolute size-40 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            className="absolute size-20 md:size-40 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
             style={{
                 scale
             }}
@@ -227,7 +250,7 @@ const CenterImage: React.FC<CenterImageProps> = ({ scrollYProgress }) => {
             <Image
                 src={centerImageText}
                 alt="girl with phone"
-                className="w-46 -translate-y-18 translate-x-10 hover:scale-120 transition-all ease-in-out duration-300"
+                className="w-46 -translate-y-10 md:-translate-y-18 translate-x-6 md:translate-x-10 scale-150 hover:scale-180 transition-all ease-in-out duration-300"
             />
         </motion.div>
     )
@@ -237,7 +260,7 @@ const StudentImage: React.FC = () => {
 
     return (
         <motion.div
-            className="absolute size-30 right-24 top-49"
+            className="absolute size-15 md:size-30 right-5 md:right-24 top-20 md:top-49"
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
@@ -257,7 +280,7 @@ const StudentImage: React.FC = () => {
             <Image
                 src={studentImageText}
                 alt="girl with phone"
-                className="-translate-y-18 scale-150 hover:scale-180 transition-all ease-in-out duration-300"
+                className="-translate-y-10 md:-translate-y-18 scale-150 hover:scale-180 transition-all ease-in-out duration-300"
             />
         </motion.div>
     )
@@ -267,7 +290,7 @@ const WorkerImage: React.FC = () => {
 
     return (
         <motion.div
-            className="absolute size-30 left-66 bottom-49"
+            className="absolute size-15 md:size-30 left-18 bottom-10 md:left-66 md:bottom-49"
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
@@ -287,7 +310,7 @@ const WorkerImage: React.FC = () => {
             <Image
                 src={workerImageText}
                 alt="text cloud"
-                className="-translate-y-18 scale-150 hover:scale-180 transition-all ease-in-out duration-300"
+                className="-translate-y-10 md:-translate-y-18 scale-150 hover:scale-180 transition-all ease-in-out duration-300"
             />
         </motion.div>
     )
@@ -297,7 +320,7 @@ const HealthImage: React.FC = () => {
 
     return (
         <motion.div
-            className="absolute size-30 left-36 top-33"
+            className="absolute size-15 md:size-30 left-9 md:left-36 top-10 md:top-33"
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
@@ -317,7 +340,7 @@ const HealthImage: React.FC = () => {
             <Image
                 src={healthImageText}
                 alt="text cloud"
-                className="-translate-y-18 scale-150 hover:scale-180 transition-all ease-in-out duration-300"
+                className="-translate-y-10 md:-translate-y-18 scale-150 hover:scale-180 transition-all ease-in-out duration-300"
             />
         </motion.div>
     )
