@@ -14,8 +14,8 @@ export default function Home() {
       <MapSection />
       <MoreThanSection />
       <PillarsSection />
-      {/* <WhyChooseSection />
-      <CloserLookSection />
+      <WhyChooseSection />
+      {/* <CloserLookSection />
       <LetsTalkSection />
       <JourneysSection /> */}
     </main>

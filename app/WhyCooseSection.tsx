@@ -6,20 +6,20 @@ import Image from "next/image";
 const WhyChooseSection: React.FC = () => {
     const cardContent: CardProps[] = [
         {
-            title: "18 Years of Trust",
-            content: " Since 2008, we've built a reputation on getting the details right. the kind of trust that only comes from doing this, well, for nearly two decades."
+            title: "18+ Years of Experience",
+            content: "Since 2008, we have built our reputation on professionalism, reliability and attention to detail. Our experience in international travel and client services provides a strong foundation for the broader business and mobility solutions we offer today."
         },
         {
             title: "Ahead of the Curve",
-            content: "Global trends move fast. We stay close to them, so our clients are never working with outdated information or old playbooks."
+            content: "We continuously expand our knowledge, services and international networks to help our clients respond to new opportunities with greater clarity and confidence."
         },
         {
-            title: "One Partner, Every Border",
-            content: "Business growth, overseas opportunities, travel, healthcare, education. we're not four different companies. We're one team who understands how it all connects."
+            title: "One Partner, Multiple Solutions",
+            content: "We bring complementary services together to provide coordinated support to our cluents, tailored to their needs."
         },
         {
-            title: "Precision You Can Rely On",
-            content: "From visas to hospital referrals to trade missions, the small details are where we work the hardest, because that's where things usually go wrong elsewhere."
+            title: "Attention To Details That Matter.",
+            content: "We take care of the critical details—documentation, timelines and logistics—to ensure a smooth and well-coordinated experience."
         },
         {
             title: "Customer-First, Always",
@@ -32,18 +32,19 @@ const WhyChooseSection: React.FC = () => {
     ]
 
     return (
-        <Section className="relative bg-secondary text-primary-content gap-15 py-27">
+        <Section className="relative md:bg-secondary text-primary gap-5 md:gap-15 md:py-27">
             <Image
                 src={background}
                 alt="background"
                 fill
+                className="hidden md:flex"
             />
 
             <AncizarH4 className="text-center font-semibold z-2">
-                Why We&apos;re the Partner People Choose
+                What Sets VTS Apart.
             </AncizarH4>
 
-            <div className="flex flex-row flex-wrap gap-4 justify-between">
+            <div className="flex flex-row flex-wrap gap-6 md:gap-4 justify-between">
                 {
                     cardContent.map(c => <Card
                         content={c.content}
@@ -64,10 +65,10 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ title, content }) => {
 
     return (
-        <div className="card bg-accent text-primary-content basis-[calc((100%-1rem)*0.5)] px-10 py-12 hover:shadow-2xl shadow-primary-content transition-all ease-in-out duration-300">
-            <div className="card-body p-0 gap-2.5">
-                <AncizarH6 className="card-title">{title}</AncizarH6>
-                <p className="text-sm">
+        <div className="card bg-secondary md:bg-accent text-primary min-h-55 md:min-h-auto md:basis-[calc((100%-1rem)*0.5)] px-5 md:px-10 py-4 md:py-12 hover:shadow-2xl shadow-primary-content transition-all ease-in-out duration-300">
+            <div className="card-body justify-center md:justify-start text-center md:text-left font-semibold p-0 gap-2.5">
+                <AncizarH6 className="text-center md:text-left">{title}</AncizarH6>
+                <p className="text-sm h-fit grow-0">
                     {content}
                 </p>
             </div>
