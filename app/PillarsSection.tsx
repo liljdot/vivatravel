@@ -37,7 +37,7 @@ const PillarsSection: React.FC = () => {
     ]
 
     return (
-        <Section className="py-15 md:py-18 gap-2.5 md:gap-27.5 text-primary">
+        <Section className="py-15 md:py-18 gap-22.5 md:gap-27.5 text-primary">
             <AncizarH4 className="text-center font-semibold">
                 Four Pillars. One Partner.
             </AncizarH4>
@@ -69,7 +69,7 @@ const PillarCard: React.FC<PillarCardProps> = ({ title, content, icon, to }) => 
     }
 
     return (
-        <div className="relative card gap-9 bg-primary-content text-primary basis-1/4 pl-10 pt-6 pb-3 pr-0">
+        <div className="relative card gap-7 md:gap-9 bg-primary-content text-primary basis-1/4 pl-10 pt-6 pb-3 pr-0">
             <div className="card-body gap-5 p-0 pr-2">
                 <AncizarH6 className="card-title">{title}</AncizarH6>
                 <p className="text-sm md:text-base">
