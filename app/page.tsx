@@ -15,8 +15,8 @@ export default function Home() {
       <MoreThanSection />
       <PillarsSection />
       <WhyChooseSection />
-      {/* <CloserLookSection />
-      <LetsTalkSection />
+      <CloserLookSection />
+      {/* <LetsTalkSection />
       <JourneysSection /> */}
     </main>
   );

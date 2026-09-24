@@ -10,7 +10,7 @@
   prefersdark: true; /* set as default dark mode (prefers-color-scheme:dark) */
   color-scheme: dark; /* color of browser-provided UI */
 
-  --color-base-100: #FFF2EA;
+  --color-base-100: #EDEEF0;
   --color-base-200: #272727;
   --color-base-300: #303030;
   --color-base-content: #FFFFFF;
