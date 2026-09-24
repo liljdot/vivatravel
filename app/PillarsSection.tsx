@@ -11,12 +11,6 @@ import { IoArrowForward } from "react-icons/io5";
 const PillarsSection: React.FC = () => {
     const pillars: PillarCardProps[] = [
         {
-            title: "Travel Globally",
-            content: "Corporate and leisure travel, visas, accommodation, and travel logistics",
-            icon: travelIcon,
-            to: "travel"
-        },
-        {
             title: "Grow Your Business",
             content: "International trade, sourcing, business missions, and market-entry support.",
             icon: growthIcon,
@@ -29,6 +23,12 @@ const PillarsSection: React.FC = () => {
             to: "overseasopportunities"
         },
         {
+            title: "Travel Globally",
+            content: "Corporate and leisure travel, visas, accommodation, and travel logistics",
+            icon: travelIcon,
+            to: "travel"
+        },
+        {
             title: "Access International Healthcare",
             content: "Medical tourism and treatment coordination",
             icon: heartIcon,
@@ -37,12 +37,12 @@ const PillarsSection: React.FC = () => {
     ]
 
     return (
-        <Section className="py-18 gap-27.5 text-primary">
+        <Section className="py-15 md:py-18 gap-2.5 md:gap-27.5 text-primary">
             <AncizarH4 className="text-center font-semibold">
                 Four Pillars. One Partner.
             </AncizarH4>
 
-            <div className="flex flex-row gap-11">
+            <div className="flex flex-col md:flex-row gap-22 md:gap-11 pl-9.5 md:pl-0">
                 {pillars.map(p => <PillarCard
                     content={p.content}
                     icon={p.icon}
@@ -64,7 +64,7 @@ interface PillarCardProps {
 
 const PillarCard: React.FC<PillarCardProps> = ({ title, content, icon, to }) => {
     const scrollTo = (to: string) => {
-        document.getElementById("closerlook")?.scrollIntoView({behavior: "smooth"})
+        document.getElementById("closerlook")?.scrollIntoView({ behavior: "smooth" })
         document.getElementById(to)?.click()
     }
 
@@ -72,7 +72,7 @@ const PillarCard: React.FC<PillarCardProps> = ({ title, content, icon, to }) => 
         <div className="relative card gap-9 bg-primary-content text-primary basis-1/4 pl-10 pt-6 pb-3 pr-0">
             <div className="card-body gap-5 p-0 pr-2">
                 <AncizarH6 className="card-title">{title}</AncizarH6>
-                <p>
+                <p className="text-sm md:text-base">
                     {content}
                 </p>
             </div>

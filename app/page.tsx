@@ -13,8 +13,8 @@ export default function Home() {
       <HeadingSection />
       <MapSection />
       <MoreThanSection />
-      {/* <PillarsSection />
-      <WhyChooseSection />
+      <PillarsSection />
+      {/* <WhyChooseSection />
       <CloserLookSection />
       <LetsTalkSection />
       <JourneysSection /> */}
