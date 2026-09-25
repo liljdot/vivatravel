@@ -42,7 +42,7 @@ const PillarsSection: React.FC = () => {
                 Four Pillars. One Partner.
             </AncizarH4>
 
-            <div className="flex flex-col md:flex-row gap-22 md:gap-11 pl-9.5 md:pl-0">
+            <div className="flex flex-col lg:flex-row gap-22 md:gap-11 pl-9.5 md:pl-0">
                 {pillars.map(p => <PillarCard
                     content={p.content}
                     icon={p.icon}
