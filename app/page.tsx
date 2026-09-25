@@ -16,8 +16,8 @@ export default function Home() {
       <PillarsSection />
       <WhyChooseSection />
       <CloserLookSection />
-      {/* <LetsTalkSection />
-      <JourneysSection /> */}
+      <LetsTalkSection />
+      {/* <JourneysSection /> */}
     </main>
   );
 }
