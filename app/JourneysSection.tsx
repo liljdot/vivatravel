@@ -27,12 +27,12 @@ const JourneysSection: React.FC = () => {
     ]
 
     return (
-        <Section className="flex flex-col gap-20 md:px-0 py-43">
+        <Section className="flex flex-col gap-20 px-0 md:px-0 py-9 md:py-43">
             <AncizarH4 className="text-center text-primary font-semibold">
                 Journeys We&apos;ve Been Part Of
             </AncizarH4>
 
-            <div className="flex flex-row gap-4 md:px-30 overflow-x-scroll">
+            <div className="flex flex-row gap-3 md:gap-4 pl-5 md:pl-30 overflow-x-scroll">
                 {
                     journeys.map(j => <JourneyCard
                         name={j.name}
@@ -53,7 +53,7 @@ interface JourneyCardProps {
 const JourneyCard: React.FC<JourneyCardProps> = ({ name, quote }) => {
 
     return (
-        <div className="flex flex-col gap-5 w-71 bg-secondary text-primary-content px-5 py-11 shrink-0">
+        <div className="flex flex-col gap-5 w-71 bg-primary-content text-primary px-5 py-11 shrink-0">
             <AncizarH6 className="text-center font-semibold">
                 {name}
             </AncizarH6>
