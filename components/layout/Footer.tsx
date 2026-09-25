@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
 
     return (
         <Section className="py-3">
-            <div className="flex flex-col gap-11 bg-primary text-primary-content rounded-4xl px-28.5 py-13.5">
+            <div className="flex flex-col gap-7.5 md:gap-11 bg-primary text-primary-content rounded-md md:rounded-4xl px-5.5 md:px-28.5 py-13.5">
                 <div className="flex flex-col gap-8.5 items-center">
                     <Image
                         src={logo}
@@ -23,8 +23,8 @@ const Footer: React.FC = () => {
                     </AncizarH4>
                 </div>
 
-                <div className="flex flex-row items-center">
-                    <div className="flex flex-row gap-7 basis-5/9">
+                <div className="flex flex-col md:flex-row items-center">
+                    <div className="flex flex-col md:flex-row gap-7 md:basis-5/9 text-center md:text-left">
                         <ul className="flex flex-col gap-6">
                             <AncizarH6 className="font-semibold">What We Do</AncizarH6>
                             <li className="list-disc list-inside text-sm">
@@ -54,11 +54,11 @@ const Footer: React.FC = () => {
                         </ul>
                     </div>
 
-                    <div className="flex flex-col gap-6.5 bg-primary-content text-primary flex-1 rounded-4xl px-8 py-7">
+                    <div className="flex flex-col gap-6.5 bg-primary-content text-primary flex-1 rounded-md md:rounded-4xl px-8 py-7 mt-16 md:mt-0">
                         <AncizarH6 className="font-semibold text-center">Get in Touch</AncizarH6>
 
                         <div className="flex flex-row justify-between">
-                            <div className="flex flex-col gap-6.5 basis-2/3">
+                            <div className="flex flex-col gap-6.5 md:basis-2/3 text-center md:text-left">
                                 <div className="flex flex-col">
                                     <h6 className="font-semibold">Address:</h6>
                                     <p>
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
                                 </div>
                             </div>
 
-                            <Link href={whatsappLink} className="relative border self-end justify-self-end btn btn-ghost hover:bg-transparent hover:border-transparent size-15">
+                            <Link href={whatsappLink} className="hidden md:inline-flex relative border self-end justify-self-end btn btn-ghost hover:bg-transparent hover:border-transparent size-15">
                                 <Image
                                     src={whatsappIcon}
                                     alt="whatsapp icon"
