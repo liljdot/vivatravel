@@ -3,6 +3,7 @@ import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import WhatsappButton from "@/components/layout/WhatsappButton";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         {children}
         <Footer />
+        <WhatsappButton />
       </body>
     </html>
   );
