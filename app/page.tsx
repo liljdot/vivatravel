@@ -9,7 +9,7 @@ import WhyChooseSection from "./WhyCooseSection";
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-full bg-neutral overflow-clip">
+    <main className="flex flex-col w-full bg-neutral overflow-clip scroll-smooth">
       <HeadingSection />
       <MapSection />
       <MoreThanSection />

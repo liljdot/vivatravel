@@ -8,7 +8,7 @@ import Image from "next/image";
 const MoreThanSection: React.FC = () => {
 
     return (
-        <Section className="md:py-36">
+        <Section className="md:py-36" id="about">
             <div className="relative card gap-23 lg:card-side lg:flex-row-reverse bg-primary px-6.5 md:px-22 py-14 md:py-19 rounded-sm md:rounded-4xl overflow-clip">
                 <Image
                     src={background}
@@ -32,7 +32,7 @@ const MoreThanSection: React.FC = () => {
                 </figure>
                 <div className="card-body basis-2/3 gap-10 md:gap-12 p-0 z-2 text-primary-content">
                     <div className="flex flex-col text-center md:text-left gap-5 md:gap-2">
-                        <AncizarH4 className="card-title">About Viva Travel Services Ltd.</AncizarH4>
+                        <AncizarH4 className="card-title  w-fit self-center md:self-start">About Viva Travel Services Ltd.</AncizarH4>
                         <p className="italic text-sm md:text-base">
                             Connecting People, Businesses and Opportunities Across Borders.
                         </p>

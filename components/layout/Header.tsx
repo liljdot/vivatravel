@@ -15,6 +15,12 @@ const Header: React.FC = () => {
     const [sandwichOpen, setSandwichOpen] = useState(false)
     const pathname = usePathname()
 
+    const scrollTo = (to: string) => {
+        document.getElementById("closerlook")?.scrollIntoView({ behavior: "smooth" })
+        document.getElementById(to)?.click()
+        setSandwichOpen(false)
+    }
+
     return (
         <>
             <div className="navbar fixed bg-neutral px-5 md:px-25 z-1000">
@@ -38,14 +44,26 @@ const Header: React.FC = () => {
                             <details>
                                 <summary className="hover:text-primary focus:text-primary focus:font-medium hover:font-medium">Services</summary>
                                 <ul className="p-2 bg-neutral z-1">
-                                    <li><Link href="/travel-tourism" className="hover:text-primary hover:font-medium">Travel & Tourism</Link></li>
-                                    <li><Link href="/business-growth" className="hover:text-primary hover:font-medium">Business Growth</Link></li>
-                                    <li><Link href="/overseas-opportunities" className="hover:text-primary hover:font-medium">Overseas Opportunities</Link></li>
-                                    <li><Link href="/international-healthcare" className="hover:text-primary hover:font-medium">International Healthcare</Link></li>
+                                    <li><a onClick={e => {
+                                        e.preventDefault()
+                                        scrollTo("travel")
+                                    }} className="hover:text-primary hover:font-medium">Travel & Tourism</a></li>
+                                    <li><a onClick={e => {
+                                        e.preventDefault()
+                                        scrollTo("growbusiness")
+                                    }} className="hover:text-primary hover:font-medium">Business Growth</a></li>
+                                    <li><a onClick={e => {
+                                        e.preventDefault()
+                                        scrollTo("overseasopportunities")
+                                    }} className="hover:text-primary hover:font-medium">Overseas Opportunities</a></li>
+                                    <li><a onClick={e => {
+                                        e.preventDefault()
+                                        scrollTo("medical")
+                                    }} className="hover:text-primary hover:font-medium">International Healthcare</a></li>
                                 </ul>
                             </details>
                         </li>
-                        <li><Link href="/about" className="hover:text-primary hover:font-medium">About</Link></li>
+                        <li><Link href="#about" className="hover:text-primary hover:font-medium">About</Link></li>
                     </ul>
                 </div>
                 {/* navbar end */}
@@ -58,7 +76,7 @@ const Header: React.FC = () => {
 
                     {/* show on mobile, hidden on desktop */}
                     <div className="flex md:hidden">
-                        <Drawer key={pathname} swipeDirection="up" onOpenChange={setSandwichOpen}>
+                        <Drawer key={pathname} swipeDirection="up" onOpenChange={setSandwichOpen} open={sandwichOpen}>
                             <DrawerTrigger
                                 render={<Button className={"text-primary"} variant="ghost" />}
                             >
@@ -68,7 +86,7 @@ const Header: React.FC = () => {
                             <DrawerContent className={`pt-14`}>
                                 <div className="flex flex-col py-12 bg-neutral text-base px-4.5 rounded-3xl">
                                     <ul className="flex flex-col text-neutral-content space-y-11">
-                                        <li><Link href={"/"}>Home</Link></li>
+                                        <li><Link onClick={() => setSandwichOpen(false)} href={"/"}>Home</Link></li>
                                         <li>
                                             <Accordion>
                                                 <AccordionItem value="products" className="gap-0">
@@ -76,16 +94,28 @@ const Header: React.FC = () => {
 
                                                     <AccordionContent className="px-5 pt-11">
                                                         <ul className="flex flex-col space-y-11">
-                                                            <li><a className="decoration-0" >Travel & Tourism</a></li>
-                                                            <li><a className="decoration-0">Business Growth</a></li>
-                                                            <li><a className="decoration-0">Overseas Opportunities</a></li>
-                                                            <li><a className="decoration-0">International Healthcare</a></li>
+                                                            <li><a onClick={e => {
+                                                                e.preventDefault()
+                                                                scrollTo("travel")
+                                                            }} className="decoration-0" >Travel & Tourism</a></li>
+                                                            <li><a onClick={e => {
+                                                                e.preventDefault()
+                                                                scrollTo("growbusiness")
+                                                            }} className="decoration-0">Business Growth</a></li>
+                                                            <li><a onClick={e => {
+                                                                e.preventDefault()
+                                                                scrollTo("overseasopportunities")
+                                                            }} className="decoration-0">Overseas Opportunities</a></li>
+                                                            <li><a onClick={e => {
+                                                                e.preventDefault()
+                                                                scrollTo("medical")
+                                                            }} className="decoration-0">International Healthcare</a></li>
                                                         </ul>
                                                     </AccordionContent>
                                                 </AccordionItem>
                                             </Accordion>
                                         </li>
-                                        <li><Link href={"/about"}>About</Link></li>
+                                        <li><Link onClick={() => setSandwichOpen(false)} href={"#about"}>About</Link></li>
                                         <Link href={whatsappLink} className="btn rounded-full bg-primary font-normal px-5 py-4 transition-all duration-300 ease-in-out hover:scale-105" target="_blank" rel="noopener noreferrer">
                                             Contact Us
                                             <BsTelephone className="ml-2 size-4.5 text-secondary" />
