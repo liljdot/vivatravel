@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Section from "./Section"
 import logo from "@/public/assets/images/footer-logo.png"
@@ -7,6 +9,10 @@ import { whatsappLink } from "@/app/data"
 import whatsappIcon from "@/public/assets/images/whatsapp-icon.png"
 
 const Footer: React.FC = () => {
+    const scrollTo = (to: string) => {
+        document.getElementById("closerlook")?.scrollIntoView({ behavior: "smooth" })
+        document.getElementById(to)?.click()
+    }
 
     return (
         <Section className="py-3">
@@ -28,28 +34,40 @@ const Footer: React.FC = () => {
                         <ul className="flex flex-col gap-6">
                             <AncizarH6 className="font-semibold">What We Do</AncizarH6>
                             <li className="list-disc list-inside text-sm">
-                                <a className="link link-hover">Grow Your Business Explore</a>
+                                <a onClick={e => {
+                                    e.preventDefault()
+                                    scrollTo("growbusiness")
+                                }} className="link link-hover">Grow Your Business</a>
                             </li>
                             <li className="list-disc list-inside text-sm">
-                                <a className="link link-hover">Overseas Opportunities</a>
+                                <a onClick={e => {
+                                    e.preventDefault()
+                                    scrollTo("overseasopportunities")
+                                }} className="link link-hover">Explore Overseas Opportunities</a>
                             </li>
-                            <li className="list-disc list-inside text-sm">
+                            <li onClick={e => {
+                                e.preventDefault()
+                                scrollTo("travel")
+                            }} className="list-disc list-inside text-sm">
                                 <a className="link link-hover">Travel Globally</a>
                             </li>
                             <li className="list-disc list-inside text-sm">
-                                <a className="link link-hover">Access International Healthcare</a>
+                                <a onClick={e => {
+                                    e.preventDefault()
+                                    scrollTo("medical")
+                                }} className="link link-hover">Access International Healthcare</a>
                             </li>
                         </ul>
                         <ul className="flex flex-col gap-6">
                             <AncizarH6 className="font-semibold">Company</AncizarH6>
                             <li className="list-disc list-inside text-sm">
-                                <a className="link link-hover">The Viva Story</a>
+                                <Link href={"#about"} className="link link-hover">The Viva Story</Link>
                             </li>
                             <li className="list-disc list-inside text-sm">
-                                <a className="link link-hover">The Viva Difference</a>
+                                <Link href={"#difference"} className="link link-hover">The Viva Difference</Link>
                             </li>
                             <li className="list-disc list-inside text-sm">
-                                <a className="link link-hover">Testimonials</a>
+                                <Link href={"#testimonials"} className="link link-hover">Testimonials</Link>
                             </li>
                         </ul>
                     </div>

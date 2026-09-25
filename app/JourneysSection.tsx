@@ -27,7 +27,7 @@ const JourneysSection: React.FC = () => {
     ]
 
     return (
-        <Section className="flex flex-col gap-20 px-0 md:px-0 py-9 md:py-43">
+        <Section id="testimonials" className="flex flex-col gap-20 px-0 md:px-0 py-9 md:py-43">
             <AncizarH4 className="text-center text-primary font-semibold">
                 Journeys We&apos;ve Been Part Of
             </AncizarH4>

@@ -32,7 +32,7 @@ const WhyChooseSection: React.FC = () => {
     ]
 
     return (
-        <Section className="relative md:bg-secondary text-primary gap-5 md:gap-15 md:py-27">
+        <Section id="difference" className="relative md:bg-secondary text-primary gap-5 md:gap-15 md:py-27">
             <Image
                 src={background}
                 alt="background"
