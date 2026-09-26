@@ -14,6 +14,7 @@ import { whatsappLink } from "./data"
 import { IoArrowForward } from "react-icons/io5"
 import { RiArrowDropDownLine } from "react-icons/ri"
 import { cn } from "cn"
+import InquireButton from "@/components/ui/InquireButton"
 
 const CloserLookSection: React.FC = () => {
 
@@ -321,11 +322,10 @@ const SingleTabContent: React.FC<SingleTabContentProps> = ({ content }) => {
                             {content.description}
                         </p>
                     </div>
-
-                    <Link href={whatsappLink} className="btn hidden md:flex rounded-full bg-primary font-normal self-end px-8 py-4 transition-all duration-300 ease-in-out hover:scale-105">
-                        Make an Inquiry
-                        <IoArrowForward className="ml-2 size-4.5 text-secondary" />
-                    </Link>
+                    
+                    <div className="self-end hidden md:flex">
+                        <InquireButton />
+                    </div>
                 </div>
             </div>
 
