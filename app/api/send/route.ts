@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
     const { data, error } = await resend.emails.send({
         from: "hello@vivatravelservices.com",
-        to: "jehuoki@gmail.com",
+        to: "vivatravelsng@gmail.com",
         subject: `Message from ${name}`,
         react: Welcome({ email, name, message })
     })
