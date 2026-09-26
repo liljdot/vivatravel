@@ -65,9 +65,9 @@ const Welcome = ({ email, message, name }: Props) => {
                                 {message}
                             </Text>
 
-                            <Button className="text-sm bg-primary text-primary-content leading-normal rounded-lg py-3 px-6">
+                            <Link href={`mailto:${email}?subject=VTS%20Reply`} className="text-sm bg-primary text-primary-content leading-normal rounded-lg py-3 px-6">
                                 Reply
-                            </Button>
+                            </Link>
                         </Section>
                     </Container>
                 </Body>

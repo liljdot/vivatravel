@@ -20,7 +20,8 @@ interface Inputs {
 }
 
 const InquireButton: React.FC<Props> = ({ className, invert }) => {
-    const { register, control } = useForm<Inputs>()
+    const { register, control, formState: { isLoading } } = useForm<Inputs>()
+    const { register: desktopRegister, control: desktopControl, formState: { isLoading: desktopIsLoading } } = useForm<Inputs>()
 
     const popUpContent: ReactNode = (
         <>
@@ -30,7 +31,7 @@ const InquireButton: React.FC<Props> = ({ className, invert }) => {
                 onSuccess={() => toast.success("Message has been sent")}
                 onError={() => toast.error("Something went wrong")}
                 className="hidden md:block"
-                control={control}
+                control={desktopControl}
             >
                 <div className="grid gap-1.5">
                     <h2 className="text-lg leading-none font-semibold">
@@ -51,7 +52,7 @@ const InquireButton: React.FC<Props> = ({ className, invert }) => {
                             Name
                         </label>
                         <input
-                            {...register("name", {
+                            {...desktopRegister("name", {
                                 required: true
                             })}
                             placeholder="Jane Doe"
@@ -66,7 +67,7 @@ const InquireButton: React.FC<Props> = ({ className, invert }) => {
                             Email
                         </label>
                         <input
-                            {...register("email", {
+                            {...desktopRegister("email", {
                                 required: true,
                                 pattern: {
                                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -86,7 +87,7 @@ const InquireButton: React.FC<Props> = ({ className, invert }) => {
                             Message
                         </label>
                         <textarea
-                            {...register("message", {
+                            {...desktopRegister("message", {
                                 required: true
                             })}
                             placeholder="How can we help?"
@@ -96,13 +97,20 @@ const InquireButton: React.FC<Props> = ({ className, invert }) => {
                     </div>
                 </div>
 
+
                 <div className="flex justify-end gap-2">
                     <DialogTrigger>
                         <Button type="button" variant="outline">
                             Cancel
                         </Button>
                     </DialogTrigger>
-                    <Button type="submit">Send message</Button>
+                    <Button disabled={desktopIsLoading} type="submit" className={"flex items-center justify-center min-w-30"}>
+                        {
+                            desktopIsLoading ?
+                                <span className="loading loading-spinner loading-xl"></span>
+                                : "Send message"
+                        }
+                    </Button>
                 </div>
             </Form>
 
@@ -182,7 +190,13 @@ const InquireButton: React.FC<Props> = ({ className, invert }) => {
                         </div>
 
                         <div className="flex flex-col gap-2 p-4">
-                            <Button type="submit">Send message</Button>
+                            <Button disabled={isLoading} type="submit" className={"flex items-center justify-center"}>
+                                {
+                                    isLoading ?
+                                        <span className="loading loading-spinner loading-xl"></span>
+                                        : "Send message"
+                                }
+                            </Button>
                             <DrawerTrigger type="button" className={"outline-1 rounded-sm"}>
                                 Cancel
                             </DrawerTrigger>
