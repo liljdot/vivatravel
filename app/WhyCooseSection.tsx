@@ -65,7 +65,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ title, content }) => {
 
     return (
-        <div className="card bg-secondary md:bg-accent text-primary min-h-55 md:min-h-auto md:basis-[calc((100%-1rem)*0.5)] px-5 md:px-10 py-4 md:py-12 hover:shadow-2xl shadow-primary-content transition-all ease-in-out duration-300">
+        <div className="card bg-secondary md:bg-[#f8b600] text-primary min-h-55 md:min-h-auto md:basis-[calc((100%-1rem)*0.5)] px-5 md:px-10 py-4 md:py-12 hover:shadow-2xl shadow-primary-content transition-all ease-in-out duration-300">
             <div className="card-body justify-center md:justify-start text-center md:text-left font-semibold p-0 gap-2.5">
                 <AncizarH6 className="text-center md:text-left">{title}</AncizarH6>
                 <p className="text-sm h-fit grow-0">
