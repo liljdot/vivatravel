@@ -10,6 +10,7 @@ import toast, { Toaster } from "react-hot-toast"
 
 interface Props {
     className?: string
+    invert?: boolean
 }
 
 interface Inputs {
@@ -18,7 +19,7 @@ interface Inputs {
     message: string
 }
 
-const InquireButton: React.FC<Props> = ({ className }) => {
+const InquireButton: React.FC<Props> = ({ className, invert }) => {
     const { register, control } = useForm<Inputs>()
 
     const popUpContent: ReactNode = (
@@ -197,7 +198,7 @@ const InquireButton: React.FC<Props> = ({ className }) => {
             <DialogOrDrawer content={popUpContent}>
                 <button className={cn("btn rounded-full bg-primary font-normal px-8 py-4 transition-all duration-300 ease-in-out hover:scale-105", className)} rel="noopener noreferrer">
                     Make an Inquiry
-                    <IoArrowForward className="ml-2 size-4.5 text-secondary" />
+                    <IoArrowForward className={cn("ml-2 size-4.5 text-secondary", `${invert && "text-primary"}`)} />
                 </button>
             </DialogOrDrawer>
             <Toaster />

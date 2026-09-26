@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoArrowForward } from "react-icons/io5";
 import { whatsappLink } from "./data";
+import InquireButton from "@/components/ui/InquireButton";
 
 const LetsTalkSection: React.FC = () => {
 
@@ -39,10 +40,7 @@ const LetsTalkSection: React.FC = () => {
                         </p>
                     </div>
 
-                    <Link href={whatsappLink} className="btn w-fit rounded-full bg-secondary font-normal px-8 py-4 transition-all duration-300 ease-in-out hover:scale-105">
-                        Make an Inquiry
-                        <IoArrowForward className="ml-2 size-4.5 text-primary" />
-                    </Link>
+                    <InquireButton invert className="bg-secondary text-primary-content" />
                 </div>
 
                 <figure className="md:basis-[calc((100%-1.25rem)*2/5)]">
