@@ -17,6 +17,7 @@ import { cn } from "cn"
 import InquireButton from "@/components/ui/InquireButton"
 
 const CloserLookSection: React.FC = () => {
+    console.log(process.env.NEXT_PUBLIC_APP_URL)
 
     return (
         <Section id="closerlook" className="gap-7.5 md:gap-11 py-15 md:py-50 text-primary">
