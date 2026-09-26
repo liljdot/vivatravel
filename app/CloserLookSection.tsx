@@ -9,15 +9,10 @@ import growthIcon from "@/public/assets/images/growth-icon.png"
 import worldIcon from "@/public/assets/images/world-icon.png"
 import heartIcon from "@/public/assets/images/heart-icon.png"
 import { useState } from "react"
-import Link from "next/link"
-import { whatsappLink } from "./data"
-import { IoArrowForward } from "react-icons/io5"
-import { RiArrowDropDownLine } from "react-icons/ri"
 import { cn } from "cn"
 import InquireButton from "@/components/ui/InquireButton"
 
 const CloserLookSection: React.FC = () => {
-    console.log(process.env.NEXT_PUBLIC_APP_URL)
 
     return (
         <Section id="closerlook" className="gap-7.5 md:gap-11 py-15 md:py-50 text-primary">
