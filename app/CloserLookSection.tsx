@@ -9,6 +9,7 @@ import growthIcon from "@/public/assets/images/growth-icon.png"
 import worldIcon from "@/public/assets/images/world-icon.png"
 import heartIcon from "@/public/assets/images/heart-icon.png"
 import { useState } from "react"
+import { RiArrowDropDownLine } from "react-icons/ri"
 import { cn } from "cn"
 import InquireButton from "@/components/ui/InquireButton"
 
