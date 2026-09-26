@@ -17,6 +17,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { IoArrowForward } from "react-icons/io5";
 import { whatsappLink } from "./data";
+import InquireButton from "@/components/ui/InquireButton";
 
 const MapSection: React.FC = () => {
 
@@ -131,10 +132,10 @@ const MapSection: React.FC = () => {
                 <HealthImage />
             </Section>
 
-            <Link href={whatsappLink} className="my-11 md:hidden flex w-fit mx-auto btn rounded-full bg-primary font-normal px-8 py-4 transition-all duration-300 ease-in-out hover:scale-105" target="_blank" rel="noopener noreferrer">
-                Make an Inquiry
-                <IoArrowForward className="ml-2 size-4.5 text-secondary" />
-            </Link>
+            
+            <div className="my-11 md:hidden mx-auto">
+                <InquireButton />
+            </div>
         </>
     )
 }

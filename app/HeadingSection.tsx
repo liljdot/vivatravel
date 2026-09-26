@@ -15,7 +15,7 @@ const HeadingSection: React.FC = () => {
                 Your trusted partner for international business growth, overseas opportunities, education, global travel and world-class healthcare, all in one place.
             </p>
 
-            <InquireButton />
+            <InquireButton className="hidden md:flex" />
         </Section>
     )
 }
