@@ -1,1 +1,1 @@
-export const whatsappLink: string = ""
+export const whatsappLink: string = "https://wa.me/+2347080330353"

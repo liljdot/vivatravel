@@ -20,7 +20,7 @@ interface Inputs {
 }
 
 const InquireButton: React.FC<Props> = ({ className, invert }) => {
-    const { register, control, formState: { isLoading } } = useForm<Inputs>()
+    const { register, control, formState: { isSubmitting, } } = useForm<Inputs>()
     const { register: desktopRegister, control: desktopControl, formState: { isLoading: desktopIsLoading } } = useForm<Inputs>()
 
     const popUpContent: ReactNode = (
@@ -190,9 +190,9 @@ const InquireButton: React.FC<Props> = ({ className, invert }) => {
                         </div>
 
                         <div className="flex flex-col gap-2 p-4">
-                            <Button disabled={isLoading} type="submit" className={"flex items-center justify-center"}>
+                            <Button disabled={isSubmitting} type="submit" className={"flex items-center justify-center"}>
                                 {
-                                    isLoading ?
+                                    isSubmitting ?
                                         <span className="loading loading-spinner loading-xl"></span>
                                         : "Send message"
                                 }
