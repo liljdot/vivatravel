@@ -4,7 +4,7 @@ import Section from "@/components/layout/Section"
 import Image from "next/image";
 import mapImage from "@/public/assets/images/dot-map.png"
 import centerImage from "@/public/assets/images/girl-with-phone.png"
-import centerImageText from "@/public/assets/images/we-move-text.png"
+import centerImageText from "@/public/assets/images/we-connect-text.png"
 import studentImageText from "@/public/assets/images/from-visa-text.png"
 import studentImage from "@/public/assets/images/student-image.png"
 import workerImage from "@/public/assets/images/worker-image.png"
@@ -14,9 +14,6 @@ import healthImageText from "@/public/assets/images/health-image-text.png"
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { IoArrowForward } from "react-icons/io5";
-import { whatsappLink } from "./data";
 import InquireButton from "@/components/ui/InquireButton";
 
 const MapSection: React.FC = () => {
