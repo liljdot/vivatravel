@@ -145,11 +145,11 @@ const Selector: React.FC = () => {
             title: "Medical & Educational Mobility",
             tabTitle: "International Healthcare",
             description: <>
-                VTS facilitates international medical and educational travel for clients seeking opportunities and services outside Nigeria.
+                VTS facilitates international (educational and medical) travel for clients seeking opportunities and services outside Nigeria.
                 <br /><br />
                 Access world-class healthcare beyond your borders, with Viva Travel Services by your side at every step. We connect Nigerian patients with internationally accredited hospitals and specialists offering advanced diagnostics, expert consultations, complex surgeries, cancer care, fertility treatment, organ transplantation, cardiovascular care, orthopaedics and a wide range of other specialised medical services.
                 <br /><br />
-                As your dedicated medical journey partner, we handle it all hospital referrals, appointment scheduling, visa support, travel arrangements, accommodation, and personal patient assistance, managing every stage with professionalism, discretion and care.
+                As your dedicated medical journey partner, we handle it all: hospital referrals, appointment scheduling, visa support, travel arrangements, accommodation, and personal patient assistance, managing every stage with professionalism, discretion and care.
                 <br /><br />
                 Your health deserves the very best. Let Viva Travel Services help you access it.
                 <br /><br />

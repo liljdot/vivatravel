@@ -15,7 +15,7 @@ const WhyChooseSection: React.FC = () => {
         },
         {
             title: "One Partner, Multiple Solutions",
-            content: "We bring complementary services together to provide coordinated support to our cluents, tailored to their needs."
+            content: "We bring complementary services together to provide coordinated support tailored to each client's needs."
         },
         {
             title: "Attention To Details That Matter.",
