@@ -109,7 +109,7 @@ const Selector: React.FC = () => {
             services: [
                 {
                     title: "Flight Reservations",
-                    content: "The right routes and fares, booked without the back-and-forth."
+                    content: "The right routes and fares, booked without unnecessary back-and-forth."
                 },
                 {
                     title: "Hotel Reservations",
