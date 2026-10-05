@@ -24,13 +24,13 @@ const PillarsSection: React.FC = () => {
         },
         {
             title: "Travel Globally",
-            content: "Corporate and leisure travel, visas, accommodation, and travel logistics",
+            content: "Corporate and leisure travel, visas, accommodation, and travel logistics.",
             icon: travelIcon,
             to: "travel"
         },
         {
             title: "Access International Healthcare",
-            content: "Medical tourism and treatment coordination",
+            content: "Medical tourism and treatment coordination.",
             icon: heartIcon,
             to: "medical"
         }
@@ -39,7 +39,7 @@ const PillarsSection: React.FC = () => {
     return (
         <Section className="py-15 md:py-18 gap-22.5 md:gap-27.5 text-primary">
             <AncizarH4 className="text-center font-semibold">
-                Four Pillars. One Partner.
+                Four Pillars, One Partner.
             </AncizarH4>
 
             <div className="flex flex-col lg:flex-row gap-22 md:gap-11 pl-9.5 md:pl-0">
