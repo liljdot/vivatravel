@@ -23,7 +23,7 @@ const CloserLookSection: React.FC = () => {
                 </AncizarH4>
 
                 <p className="italic text-sm md:text-base font-semibold px-7 md:px-0">
-                    Four pillars, one company. Choose the one that matches where you&apos;re headed
+                    Four pillars, one company. Choose the one that matches where you&apos;re headed.
                 </p>
             </div>
 
