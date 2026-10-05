@@ -10,7 +10,7 @@ import studentImage from "@/public/assets/images/student-image.png"
 import workerImage from "@/public/assets/images/worker-image.png"
 import workerImageText from "@/public/assets/images/worker-image-text.png"
 import healthImage from "@/public/assets/images/health-image.png"
-import healthImageText from "@/public/assets/images/health-image-text.png"
+import healthImageText from "@/public/assets/images/health-image-text-1.png"
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
