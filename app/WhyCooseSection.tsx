@@ -23,7 +23,7 @@ const WhyChooseSection: React.FC = () => {
         },
         {
             title: "Customer-First, Always",
-            content: "We don't do generic. Every service is shaped around what you actually need, not a one-size-fits-all package."
+            content: "Every service is shaped around what you actually need—not a one-size-fits-all package."
         },
         {
             title: "A Track Record That Speaks",
