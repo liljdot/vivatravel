@@ -41,7 +41,7 @@ const MoreThanSection: React.FC = () => {
                         Established in April 2008, Viva Travel Services Ltd (VTS) began as a trusted travel and tourism company. Today, we provide business, international mobility and opportunity-focused solutions alongside our travel services.
                         <br />
                         <br />
-                        Our work covers four key areas: Business Growth and International Trade Facilitation, International Recruitment and Overseas Opportunities, Travel and Tourism, and International Mobility Services
+                        Our work covers four key areas: Business Growth and International Trade Facilitation, International Recruitment and Overseas Opportunities, Travel and Tourism, as well as International Mobility Services
                         <br />
                         <br />
                         <AncizarH5>Our Approach</AncizarH5>
