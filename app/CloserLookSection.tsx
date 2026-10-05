@@ -78,7 +78,11 @@ const Selector: React.FC = () => {
         {
             title: "International Recruitment & Overseas Opportunities",
             tabTitle: "Overseas Opportunity",
-            description: "We connect qualified candidates with legitimate employment and professional opportunities abroad, providing guidance throughout the recruitment and mobility process with a focus on transparency, proper documentation and responsible support.",
+            description: <>
+                We connect qualified candidates with legitimate employment and professional opportunities abroad, providing guidance throughout the recruitment and mobility process with a focus on transparency, proper documentation and responsible support.
+                <br /><br />
+                Our educational travel services support students and families pursuing undergraduate and postgraduate study opportunities abroad, including university placement guidance and the associated travel and mobility arrangements.
+            </>,
             icon: worldIcon,
             id: "overseasopportunities",
             services: [
@@ -97,7 +101,15 @@ const Selector: React.FC = () => {
                 {
                     title: "Work & Relocation Support",
                     content: "Beyond the job offer, we help with the practical side of the move, from documentation to settling into a new country with fewer surprises."
-                }
+                },
+                {
+                    title: "University Selection & Admission Support",
+                    content: "Guidance toward the right course and school, and help through the application"
+                },
+                {
+                    title: "Student Visa Assistance",
+                    content: "Applications prepared with the precise student visas demand."
+                },
             ]
         },
         {
@@ -152,8 +164,6 @@ const Selector: React.FC = () => {
                 As your dedicated medical journey partner, we handle it all: hospital referrals, appointment scheduling, visa support, travel arrangements, accommodation, and personal patient assistance, managing every stage with professionalism, discretion and care.
                 <br /><br />
                 Your health deserves the very best. Let Viva Travel Services help you access it.
-                <br /><br />
-                Our educational travel services support students and families pursuing undergraduate and postgraduate study opportunities abroad, including university placement guidance and the associated travel and mobility arrangements.
             </>,
             icon: heartIcon,
             id: "medical",
@@ -177,14 +187,6 @@ const Selector: React.FC = () => {
                 {
                     title: "Airport transfers",
                     content: "Safe, comfortable transport from the moment you land to your treatment facility, no navigating an unfamiliar city while unwell or exhausted."
-                },
-                {
-                    title: "University Selection & Admission Support",
-                    content: "Guidance toward the right course and school, and help through the application"
-                },
-                {
-                    title: "Student Visa Assistance",
-                    content: "Applications prepared with the precise student visas demand."
                 },
                 {
                     title: "Pre-Departure Guidance",
@@ -319,7 +321,7 @@ const SingleTabContent: React.FC<SingleTabContentProps> = ({ content }) => {
                             {content.description}
                         </p>
                     </div>
-                    
+
                     <div className="self-end hidden md:flex">
                         <InquireButton />
                     </div>
