@@ -20,10 +20,10 @@ const JourneysSection: React.FC = () => {
             name: "Emeka U.",
             quote: "When my father needed treatment we couldn't get locally, Viva found the right hospital in India, sorted the visa, and arranged everything down to the airport pickup. I didn't have to figure any of it out alone."
         },
-        {
-            name: "Emeka U.",
-            quote: "When my father needed treatment we couldn't get locally, Viva found the right hospital in India, sorted the visa, and arranged everything down to the airport pickup. I didn't have to figure any of it out alone."
-        }
+        // {
+        //     name: "Emeka U.",
+        //     quote: "When my father needed treatment we couldn't get locally, Viva found the right hospital in India, sorted the visa, and arranged everything down to the airport pickup. I didn't have to figure any of it out alone."
+        // }
     ]
 
     return (
