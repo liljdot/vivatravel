@@ -10,7 +10,7 @@ const WhyChooseSection: React.FC = () => {
             content: "Since 2008, we have built our reputation on professionalism, reliability and attention to detail. Our experience in international travel and client services provides a strong foundation for the broader business and mobility solutions we offer today."
         },
         {
-            title: "Ahead of the Curve",
+            title: "Connected to Global Opportunities",
             content: "We continuously expand our knowledge, services and international networks to help our clients respond to new opportunities with greater clarity and confidence."
         },
         {
@@ -18,7 +18,7 @@ const WhyChooseSection: React.FC = () => {
             content: "We bring complementary services together to provide coordinated support tailored to each client's needs."
         },
         {
-            title: "Attention To Details That Matter.",
+            title: "Attention To Details That Matter",
             content: "We take care of the critical details—documentation, timelines and logistics—to ensure a smooth and well-coordinated experience."
         },
         {
