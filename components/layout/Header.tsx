@@ -46,16 +46,16 @@ const Header: React.FC = () => {
                                 <ul className="p-2 bg-neutral z-1">
                                     <li><a onClick={e => {
                                         e.preventDefault()
-                                        scrollTo("travel")
-                                    }} className="hover:text-primary hover:font-medium">Travel & Tourism</a></li>
-                                    <li><a onClick={e => {
-                                        e.preventDefault()
                                         scrollTo("growbusiness")
                                     }} className="hover:text-primary hover:font-medium">Business Growth</a></li>
                                     <li><a onClick={e => {
                                         e.preventDefault()
                                         scrollTo("overseasopportunities")
                                     }} className="hover:text-primary hover:font-medium">Overseas Opportunities</a></li>
+                                    <li><a onClick={e => {
+                                        e.preventDefault()
+                                        scrollTo("travel")
+                                    }} className="hover:text-primary hover:font-medium">Travel & Tourism</a></li>
                                     <li><a onClick={e => {
                                         e.preventDefault()
                                         scrollTo("medical")
@@ -93,11 +93,7 @@ const Header: React.FC = () => {
                                                     <AccordionTrigger className="decoration-0 p-0">Services</AccordionTrigger>
 
                                                     <AccordionContent className="px-5 pt-11">
-                                                        <ul className="flex flex-col space-y-11">
-                                                            <li><a onClick={e => {
-                                                                e.preventDefault()
-                                                                scrollTo("travel")
-                                                            }} className="decoration-0" >Travel & Tourism</a></li>
+                                                        <ul className="flex flex-col space-y-11">        
                                                             <li><a onClick={e => {
                                                                 e.preventDefault()
                                                                 scrollTo("growbusiness")
@@ -106,6 +102,10 @@ const Header: React.FC = () => {
                                                                 e.preventDefault()
                                                                 scrollTo("overseasopportunities")
                                                             }} className="decoration-0">Overseas Opportunities</a></li>
+                                                            <li><a onClick={e => {
+                                                                e.preventDefault()
+                                                                scrollTo("travel")
+                                                            }} className="decoration-0" >Travel & Tourism</a></li>
                                                             <li><a onClick={e => {
                                                                 e.preventDefault()
                                                                 scrollTo("medical")
