@@ -55,7 +55,7 @@ const Selector: React.FC = () => {
                 },
                 {
                     title: "Manufacturer Sourcing",
-                    content: "We connect you to vetted manufacturers and suppliers you can actually trust."
+                    content: "We help you identify and engage suitable manufacturers and suppliers, with support for sourcing and due diligence."
                 },
                 {
                     title: "Corporate Protocol Training",
