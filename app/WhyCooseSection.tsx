@@ -26,8 +26,8 @@ const WhyChooseSection: React.FC = () => {
             content: "Every service is shaped around what you actually need—not a one-size-fits-all package."
         },
         {
-            title: "A Track Record That Speaks",
-            content: "Individuals, families, professionals, and businesses have trusted us to get them where they're going. That trust is our biggest asset."
+            title: "Experience You Can Build On",
+            content: "For more than 18 years, individuals, families, professionals and businesses have entrusted VTS with their travel and international mobility needs."
         }
     ]
 
