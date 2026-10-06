@@ -38,7 +38,7 @@ const MoreThanSection: React.FC = () => {
                         </p>
                     </div>
                     <div className="text-sm/6.5 text-center md:text-left">
-                        Established in April 2008, Viva Travel Services Ltd (VTS) began as a trusted travel and tourism company. Today, we provide business, international mobility and opportunity-focused solutions alongside our travel services.
+                        Established in April 2008, Viva Travel Services Ltd. (VTS) began as a trusted travel and tourism company. Today, we provide business, international mobility and opportunity-focused solutions alongside our travel services.
                         <br />
                         <br />
                         Today, our services are organised around four complementary areas: Business Growth & International Trade Facilitation, Overseas Opportunities, Travel & Tourism, and International Healthcare.
