@@ -96,15 +96,11 @@ const Selector: React.FC = () => {
                 },
                 {
                     title: "Educational Opportunities",
-                    content: "Pointing you to overseas learning routes tied to real career outcomes."
+                    content: "Pointing you to overseas learning routes tied to real career outcomes. Guidance toward the right course and school, and help through the application."
                 },
                 {
                     title: "Work & Relocation Support",
                     content: "Beyond the job offer, we help with the practical side of the move, from documentation to settling into a new country with fewer surprises."
-                },
-                {
-                    title: "University Selection & Admission Support",
-                    content: "Guidance toward the right course and school, and help through the application"
                 },
                 {
                     title: "Student Visa Assistance",
