@@ -57,7 +57,7 @@ const AncizarH4: React.FC<ComponentProps<"h4">> = ({
 }) => {
 
     return (
-        <h4
+        <h2
             className={cn(
                 aSerif.className,
                 "text-2xl md:text-4xl",
@@ -66,7 +66,7 @@ const AncizarH4: React.FC<ComponentProps<"h4">> = ({
             {...props}
         >
             {children}
-        </h4>
+        </h2>
     )
 }
 
