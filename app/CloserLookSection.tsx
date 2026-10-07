@@ -299,7 +299,7 @@ const SingleTab: React.FC<SingleTabProps> = ({ title, index, id }) => {
 const SingleTabContent: React.FC<SingleTabContentProps> = ({ content }) => {
 
     return (
-        <TabsContent value={content.id} className={"flex flex-col gap-7.5 md:gap-20 text-primary"}>
+        <TabsContent value={content.id} className={"flex flex-col gap-7.5 md:gap-20 text-primary"} keepMounted>
             <div className="flex flex-col gap-7.5">
                 <Image
                     src={content.icon}
