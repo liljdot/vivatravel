@@ -1,6 +1,6 @@
 "use client"
 import Section from "@/components/layout/Section"
-import { AncizarH4, AncizarH6 } from "@/components/Typography";
+import { AncizarH1, AncizarH4, AncizarH6 } from "@/components/Typography";
 import travelIcon from "@/public/assets/images/travel-icon.png"
 import worldIcon from "@/public/assets/images/world-icon.png"
 import heartIcon from "@/public/assets/images/heart-icon.png"
@@ -11,7 +11,7 @@ import { IoArrowForward } from "react-icons/io5";
 const PillarsSection: React.FC = () => {
     const pillars: PillarCardProps[] = [
         {
-            title: "Grow Your Business",
+            title: "Business Growth and International Trade Facilitation",
             content: "International trade, sourcing, business missions, and market-entry support.",
             icon: growthIcon,
             to: "growbusiness"
@@ -23,13 +23,13 @@ const PillarsSection: React.FC = () => {
             to: "overseasopportunities"
         },
         {
-            title: "Travel Globally",
+            title: "Travel and Tourism Services",
             content: "Corporate and leisure travel, visas, accommodation, and travel logistics.",
             icon: travelIcon,
             to: "travel"
         },
         {
-            title: "Access International Healthcare",
+            title: "Medical Tourism and International Healthcare",
             content: "Medical tourism and treatment coordination.",
             icon: heartIcon,
             to: "medical"
@@ -71,7 +71,7 @@ const PillarCard: React.FC<PillarCardProps> = ({ title, content, icon, to }) => 
     return (
         <div className="relative card gap-7 md:gap-9 bg-primary-content text-primary basis-1/4 pl-10 pt-6 pb-3 pr-0">
             <div className="card-body gap-5 p-0 pr-2">
-                <AncizarH6 className="card-title">{title}</AncizarH6>
+                <AncizarH1 className="card-title text-lg md:text-lg">{title}</AncizarH1>
                 <p className="text-sm md:text-base">
                     {content}
                 </p>
